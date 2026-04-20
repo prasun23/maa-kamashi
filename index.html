@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Devi KaMaShi — The unified form of Kali, Manasa, and Shitala, revealed in sacred dream to Late Bhupati Charan Adak of Nonakundu, Howrah, West Bengal.">
+<meta property="og:title" content="Devi KaMaShi — देवी कामाशि">
+<meta property="og:description" content="The unified form of Kali, Manasa, and Shitala. A divine revelation. A family's legacy.">
+<meta property="og:type" content="website">
+<title>Devi KaMaShi — देवी कामाशि</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&family=Noto+Serif+Devanagari:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a0a05;
+    --ink-soft: #3d1f10;
+    --crimson: #7b1e1e;
+    --crimson-light: #a83030;
+    --gold: #8b6914;
+    --gold-light: #c49a22;
+    --parchment: #f5edd8;
+    --parchment-deep: #ecdfc4;
+    --parchment-dark: #e0d0a8;
+    --saffron: #c4640a;
+    --lotus: #c4527a;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    background-color: var(--ink);
+    color: var(--parchment);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26, 10, 5, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(139, 105, 20, 0.3);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-name {
+    font-family: 'IM Fell English', serif;
+    font-size: 1.15rem;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.78rem;
+    color: rgba(245, 237, 216, 0.65);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 40%, #3d1208 0%, #1a0a05 60%, #0d0503 100%);
+  }
+
+  .mandala-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(139, 105, 20, 0.15);
+    animation: slowspin 40s linear infinite;
+    transform-origin: center;
+  }
+  .mandala-ring:nth-child(1) { width: 500px; height: 500px; top: 50%; left: 50%; margin: -250px 0 0 -250px; animation-direction: normal; }
+  .mandala-ring:nth-child(2) { width: 380px; height: 380px; top: 50%; left: 50%; margin: -190px 0 0 -190px; border-style: dashed; animation-direction: reverse; animation-duration: 30s; }
+  .mandala-ring:nth-child(3) { width: 260px; height: 260px; top: 50%; left: 50%; margin: -130px 0 0 -130px; animation-direction: normal; animation-duration: 20s; }
+
+  @keyframes slowspin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+  .hero-content { position: relative; z-index: 2; max-width: 700px; }
+
+  .devanagari-title {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 300;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    animation: fadeUp 1.2s ease both;
+    text-shadow: 0 0 40px rgba(196, 154, 34, 0.3);
+  }
+
+  .english-title {
+    font-family: 'IM Fell English', serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: rgba(245, 237, 216, 0.6);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    animation: fadeUp 1.2s 0.2s ease both;
+  }
+
+  .divider-ornament {
+    display: flex; align-items: center; justify-content: center; gap: 1rem;
+    margin: 2rem auto;
+    animation: fadeUp 1.2s 0.4s ease both;
+  }
+  .divider-ornament .line { flex: 1; max-width: 80px; height: 1px; background: linear-gradient(to right, transparent, var(--gold)); }
+  .divider-ornament .line.right { background: linear-gradient(to left, transparent, var(--gold)); }
+  .divider-ornament .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold-light); }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: rgba(245, 237, 216, 0.8);
+    line-height: 1.7;
+    animation: fadeUp 1.2s 0.5s ease both;
+  }
+
+  .name-row {
+    display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
+    margin-top: 2rem;
+    animation: fadeUp 1.2s 0.7s ease both;
+  }
+  .name-pill {
+    padding: 0.4rem 1.2rem;
+    border: 1px solid rgba(139, 105, 20, 0.4);
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(245, 237, 216, 0.6);
+  }
+  .name-pill span { color: var(--gold-light); font-weight: 600; margin-right: 0.3em; }
+
+  .scroll-cue {
+    position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    opacity: 0.4; animation: pulse 2.5s ease-in-out infinite;
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold);
+  }
+  .scroll-cue::after {
+    content: ''; display: block; width: 1px; height: 36px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.6; } }
+
+  /* SECTIONS */
+  section { padding: 5rem 2rem; max-width: 860px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'IM Fell English', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--parchment);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  .section-title em { color: var(--gold-light); font-style: italic; }
+
+  .body-text {
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.85;
+    color: rgba(245, 237, 216, 0.78);
+    margin-bottom: 1.2rem;
+  }
+
+  .hr-ornament {
+    display: flex; align-items: center; gap: 1.5rem;
+    margin: 4rem auto;
+    opacity: 0.35;
+    max-width: 860px;
+    padding: 0 2rem;
+  }
+  .hr-ornament::before, .hr-ornament::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+  .hr-ornament .symbol { color: var(--gold); font-size: 1.1rem; }
+
+  /* NAME CARDS */
+  .name-meaning {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    margin: 3rem 0;
+  }
+  @media (max-width: 600px) { .name-meaning { grid-template-columns: 1fr; } }
+  .name-card {
+    border: 1px solid rgba(139, 105, 20, 0.25);
+    border-top: 3px solid var(--gold);
+    padding: 1.5rem 1.2rem;
+    text-align: center;
+    background: rgba(139, 105, 20, 0.04);
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .name-card:hover { background: rgba(139, 105, 20, 0.09); border-top-color: var(--gold-light); }
+  .name-card .syllable {
+    font-family: 'IM Fell English', serif;
+    font-size: 3rem; color: var(--gold-light);
+    display: block; line-height: 1; margin-bottom: 0.5rem;
+  }
+  .name-card .goddess-name {
+    font-size: 1.1rem; color: var(--parchment);
+    font-weight: 600; letter-spacing: 0.05em;
+    display: block; margin-bottom: 0.5rem;
+  }
+  .name-card .goddess-desc {
+    font-size: 0.88rem; color: rgba(245, 237, 216, 0.5);
+    font-style: italic; line-height: 1.5;
+  }
+
+  /* QUOTE */
+  .sacred-quote {
+    border-left: 3px solid var(--saffron);
+    padding: 1.5rem 2rem; margin: 2.5rem 0;
+    background: rgba(196, 100, 10, 0.06);
+  }
+  .sacred-quote p {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: rgba(245, 237, 216, 0.9);
+    line-height: 1.7;
+  }
+
+  /* LINEAGE */
+  .lineage { margin: 3rem 0; position: relative; }
+  .lineage::before {
+    content: ''; position: absolute;
+    left: 20px; top: 10px; bottom: 10px; width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+    opacity: 0.3;
+  }
+  .lineage-entry {
+    display: flex; gap: 2rem; margin-bottom: 2.5rem;
+    align-items: flex-start;
+  }
+  .lineage-dot {
+    width: 40px; height: 40px; flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(139, 105, 20, 0.4);
+    background: rgba(139, 105, 20, 0.08);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem; color: var(--gold); letter-spacing: 0.05em;
+    position: relative; z-index: 1;
+  }
+  .lineage-name {
+    font-family: 'IM Fell English', serif;
+    font-size: 1.2rem; color: var(--parchment); margin-bottom: 0.2rem;
+  }
+  .lineage-role {
+    font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--saffron); margin-bottom: 0.5rem;
+  }
+  .lineage-desc {
+    font-size: 1rem; color: rgba(245, 237, 216, 0.6); line-height: 1.65;
+  }
+
+  /* MANTRA */
+  .mantra-block {
+    text-align: center; padding: 4rem 2rem;
+    border: 1px solid rgba(139, 105, 20, 0.2);
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(61,18,8,0.6) 0%, rgba(26,10,5,0.2) 100%);
+    margin: 3rem 0; position: relative; overflow: hidden;
+  }
+  .mantra-block::before {
+    content: ''; position: absolute; inset: 0;
+    border: 1px solid rgba(139, 105, 20, 0.1);
+    margin: 8px; pointer-events: none;
+  }
+  .mantra-text {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    color: var(--gold-light); display: block; margin-bottom: 0.75rem;
+    letter-spacing: 0.03em;
+    text-shadow: 0 0 30px rgba(196, 154, 34, 0.25);
+  }
+  .mantra-transliteration {
+    font-family: 'IM Fell English', serif; font-style: italic;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: rgba(245, 237, 216, 0.55); letter-spacing: 0.05em;
+  }
+
+  /* IMAGE PLACEHOLDER */
+  .deity-image-section {
+    max-width: 860px; margin: 0 auto; padding: 0 2rem 5rem;
+  }
+  .deity-image-wrap {
+    position: relative; width: 100%;
+    aspect-ratio: 3 / 4;
+    max-height: 700px;
+    border: 1px solid rgba(139, 105, 20, 0.3);
+    overflow: hidden;
+    background: radial-gradient(ellipse 70% 60% at 50% 40%, #2e0e04 0%, #120603 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .deity-image-wrap::before, .deity-image-wrap::after {
+    content: ''; position: absolute;
+    border: 1px solid rgba(139, 105, 20, 0.12);
+    pointer-events: none;
+  }
+  .deity-image-wrap::before { inset: 10px; }
+  .deity-image-wrap::after { inset: 18px; }
+  .deity-image-wrap img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center top;
+    display: block;
+  }
+  .image-placeholder-content {
+    position: relative; z-index: 2;
+    text-align: center; padding: 2rem;
+  }
+  .placeholder-symbol {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: 5rem; color: rgba(139, 105, 20, 0.22);
+    display: block; line-height: 1; margin-bottom: 1.5rem;
+    animation: slowspin 60s linear infinite;
+  }
+  .placeholder-text {
+    font-family: 'IM Fell English', serif; font-style: italic;
+    font-size: 1.1rem; color: rgba(245, 237, 216, 0.28);
+    letter-spacing: 0.05em; line-height: 1.7;
+  }
+  .placeholder-upload-note {
+    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(139, 105, 20, 0.35); margin-top: 1rem; display: block;
+  }
+  .image-caption {
+    margin-top: 1rem; text-align: center; font-style: italic;
+    font-size: 0.9rem; color: rgba(245, 237, 216, 0.32); letter-spacing: 0.04em;
+  }
+
+  /* GALLERY */
+  .gallery-section { max-width: 860px; margin: 0 auto; padding: 5rem 2rem; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
+  .gallery-item {
+    position: relative; overflow: hidden;
+    border: 1px solid rgba(139, 105, 20, 0.2);
+    background: #120603;
+    cursor: default;
+  }
+  .gallery-item.large {
+    grid-column: span 2;
+  }
+  .gallery-item-inner {
+    aspect-ratio: 4/3;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.75rem;
+    background: radial-gradient(ellipse 80% 70% at 50% 40%, #2e0e04 0%, #0d0402 100%);
+    transition: background 0.4s;
+  }
+  .gallery-item.large .gallery-item-inner { aspect-ratio: 16/9; }
+  .gallery-item img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+  .gallery-item-inner:hover { background: radial-gradient(ellipse 80% 70% at 50% 40%, #3d1208 0%, #150503 100%); }
+  .gallery-icon {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: 2.2rem; color: rgba(139, 105, 20, 0.2); line-height: 1;
+  }
+  .gallery-label {
+    font-family: 'IM Fell English', serif; font-style: italic;
+    font-size: 0.88rem; color: rgba(245, 237, 216, 0.22);
+    letter-spacing: 0.05em; text-align: center; padding: 0 0.5rem;
+  }
+  .gallery-tag {
+    font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(139, 105, 20, 0.3); margin-top: 0.3rem;
+  }
+
+  /* MAP */
+  .map-section { max-width: 860px; margin: 0 auto; padding: 5rem 2rem; }
+  .map-wrap {
+    margin-top: 2rem;
+    border: 1px solid rgba(139, 105, 20, 0.25);
+    overflow: hidden;
+    position: relative;
+  }
+  .map-wrap iframe {
+    width: 100%; height: 400px; display: block; border: none;
+    filter: grayscale(30%) sepia(20%);
+  }
+  .map-info {
+    display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap;
+    margin-top: 1.2rem; padding: 1.2rem 1.5rem;
+    border: 1px solid rgba(139, 105, 20, 0.15);
+    background: rgba(139, 105, 20, 0.04);
+  }
+  .map-info-block { flex: 1; min-width: 180px; }
+  .map-info-label {
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--saffron); margin-bottom: 0.3rem;
+  }
+  .map-info-value {
+    font-family: 'IM Fell English', serif;
+    font-size: 1rem; color: var(--parchment); line-height: 1.5;
+  }
+  .map-directions-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.55rem 1.2rem; margin-top: 0.6rem;
+    border: 1px solid rgba(139, 105, 20, 0.4);
+    color: var(--gold-light); text-decoration: none;
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    transition: background 0.3s; background: transparent;
+  }
+  .map-directions-btn:hover { background: rgba(139, 105, 20, 0.12); }
+
+  /* DOCUMENT DOWNLOAD */
+  .document-section { max-width: 860px; margin: 0 auto; padding: 0 2rem 2rem; }
+  .document-card {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 2rem; flex-wrap: wrap;
+    border: 1px solid rgba(139, 105, 20, 0.25);
+    border-left: 4px solid var(--gold);
+    padding: 1.75rem 2rem;
+    background: rgba(139, 105, 20, 0.05);
+  }
+  .document-card-left { flex: 1; min-width: 220px; }
+  .document-card-label {
+    font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--saffron); margin-bottom: 0.4rem;
+  }
+  .document-card-title {
+    font-family: 'IM Fell English', serif;
+    font-size: 1.3rem; color: var(--parchment);
+    margin-bottom: 0.4rem; line-height: 1.3;
+  }
+  .document-card-desc {
+    font-size: 0.88rem; color: rgba(245, 237, 216, 0.45);
+    font-style: italic; line-height: 1.5;
+  }
+  .download-btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid rgba(139, 105, 20, 0.5);
+    color: var(--gold-light); text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    white-space: nowrap; background: transparent;
+  }
+  .download-btn:hover {
+    background: rgba(139, 105, 20, 0.15);
+    border-color: var(--gold-light); color: var(--parchment);
+  }
+  .download-btn svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid rgba(139, 105, 20, 0.2);
+    padding: 3rem 2rem; text-align: center;
+    background: rgba(0,0,0,0.3);
+  }
+  .footer-name {
+    font-family: 'IM Fell English', serif;
+    font-size: 1.6rem; color: var(--gold-light); margin-bottom: 0.5rem;
+  }
+  .footer-devanagari {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: 1.1rem; color: rgba(245,237,216,0.35); margin-bottom: 1.5rem;
+  }
+  .footer-credit {
+    font-size: 0.8rem; color: rgba(245,237,216,0.3);
+    letter-spacing: 0.08em; line-height: 1.8;
+  }
+  .footer-credit a { color: var(--gold); text-decoration: none; }
+  .footer-credit a:hover { color: var(--gold-light); }
+
+  /* Mobile nav */
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+  }
+
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Devi KaMaShi</div>
+  <ul class="nav-links">
+    <li><a href="#name">The Name</a></li>
+    <li><a href="#vision">The Vision</a></li>
+    <li><a href="#lineage">The Lineage</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#mantra">Mantra</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="mandala-ring"></div>
+  <div class="mandala-ring"></div>
+  <div class="mandala-ring"></div>
+
+  <div class="hero-content">
+    <div class="devanagari-title">देवी कामाशि</div>
+    <div class="english-title">Devi KaMaShi</div>
+
+    <div class="divider-ornament">
+      <div class="line"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="line right"></div>
+    </div>
+
+    <p class="hero-subtitle">
+      The unified form of Kali, Manasa, and Shitala —<br>
+      revealed in sacred dream to Late Bhupati Charan Adak<br>
+      of Nonakundu, Howrah, West Bengal
+    </p>
+
+    <div class="name-row">
+      <div class="name-pill"><span>KA</span>Kali</div>
+      <div class="name-pill"><span>MA</span>Manasa</div>
+      <div class="name-pill"><span>SHI</span>Shitala</div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">Scroll</div>
+</section>
+
+<section id="name" class="reveal">
+  <div class="section-label">The Sacred Name</div>
+  <h2 class="section-title">She gave herself<br>a <em>name</em></h2>
+  <p class="body-text">
+    In the Shakta and Tantric tradition, a name is not a label — it is a mantra.
+    It is the deity herself in sound form. When Devi KaMaShi revealed herself to
+    Bhupati Charan Adak, she did not come as three separate goddesses. She came
+    as one unified being who named herself from her own three natures.
+  </p>
+  <div class="name-meaning">
+    <div class="name-card">
+      <span class="syllable">KA</span>
+      <span class="goddess-name">Kali</span>
+      <span class="goddess-desc">Goddess of time, death, and fierce liberation. The threshold between form and the formless.</span>
+    </div>
+    <div class="name-card">
+      <span class="syllable">MA</span>
+      <span class="goddess-name">Manasa</span>
+      <span class="goddess-desc">Serpent goddess. Sovereign of venom and protection. She who sends and cures the hidden danger.</span>
+    </div>
+    <div class="name-card">
+      <span class="syllable">SHI</span>
+      <span class="goddess-name">Shitala</span>
+      <span class="goddess-desc">The cool one. Goddess of fever and epidemic. Both the affliction and the mercy that withdraws it.</span>
+    </div>
+  </div>
+  <p class="body-text">
+    All three are goddesses of sudden, invisible, and feared causes of death.
+    All three are simultaneously the cause and the cure. All three are rooted in
+    non-brahminic, folk, and tantric traditions — goddesses of common people,
+    of farmers, of those whose lives are most exposed to the thresholds of existence.
+    Together as KaMaShi, they are a complete guardian.
+  </p>
+</section>
+
+<div class="hr-ornament"><span class="symbol">✦</span></div>
+
+<section id="vision" class="reveal">
+  <div class="section-label">The Origin</div>
+  <h2 class="section-title">A divine command,<br><em>~55 years ago</em></h2>
+  <p class="body-text">
+    In the late 1960s, in the village of Nonakundu, Domjur, Howrah, West Bengal,
+    a farmer and sweet shop owner named Bhupati Charan Adak received a vision in dream.
+    It was not an ordinary dream. In the language of the Shakta tradition, it was a darshan —
+    a divine revelation in which the goddess appeared directly with instruction.
+  </p>
+  <div class="sacred-quote">
+    <p>
+      She appeared as one unified divine being — six arms, three natures, one name.
+      She was simultaneously Kali, Manasa, and Shitala. She was KaMaShi.
+      And she commanded: give me a form, and worship me.
+    </p>
+  </div>
+  <p class="body-text">
+    No brahmin in the village was willing to perform daily worship of this new,
+    unrecognized form. Bhupati Charan Adak — a non-brahmin, a man of the soil —
+    took up the worship himself. He built a temple. He maintained daily worship
+    for the remainder of his life. He worshipped her until his death.
+  </p>
+  <p class="body-text">
+    This places him squarely within the living tradition of Bengal, where divine mandate
+    supersedes caste, and where the goddess chooses her devotee regardless of social station.
+    His spiritual authority was not granted by brahmin sanction. It came directly from her.
+  </p>
+</section>
+
+<div class="deity-image-section reveal">
+  <div class="deity-image-wrap">
+    <!-- Replace src below with your image file, e.g. src="devi-kamashi.jpg" -->
+    <!-- <img src="YOUR_IMAGE.jpg" alt="Devi KaMaShi"> -->
+    <div class="image-placeholder-content">
+      <span class="placeholder-symbol">ॐ</span>
+      <p class="placeholder-text">
+        The form of Devi KaMaShi —<br>
+        six arms, three natures, one being
+      </p>
+      <span class="placeholder-upload-note">Image to be placed here</span>
+    </div>
+  </div>
+  <p class="image-caption">Devi KaMaShi · देवी कामाशि · Temple of Nonakundu, Domjur, Howrah</p>
+</div>
+
+<div class="document-section reveal">
+  <div class="document-card">
+    <div class="document-card-left">
+      <div class="document-card-label">Sacred Document</div>
+      <div class="document-card-title">The Founding Record of Devi KaMaShi</div>
+      <div class="document-card-desc">The origin, vision, theology, and lineage — first written account by Dr. Prasenjit Adak, 2025 CE</div>
+    </div>
+    <a href="Devi_KaMaShi_Founding_Document.pdf" download class="download-btn">
+      <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 1a.5.5 0 0 1 .5.5v7.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 9.293V1.5A.5.5 0 0 1 8 1zM2 13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2z"/>
+      </svg>
+      Download PDF
+    </a>
+  </div>
+</div>
+
+<div class="hr-ornament"><span class="symbol">✦</span></div>
+
+<section id="lineage" class="reveal">
+  <div class="section-label">The Adak Family</div>
+  <h2 class="section-title">A lineage of<br><em>ojhas and seekers</em></h2>
+  <p class="body-text">
+    Both Bhupati Charan Adak and his son Samir were the foremost ojhas in their village —
+    spiritual intermediaries who performed healing and protection as social service,
+    never for profit. Their power derived from a personal, living relationship with their
+    presiding shakti. That shakti was KaMaShi.
+  </p>
+  <div class="lineage">
+    <div class="lineage-entry">
+      <div class="lineage-dot">I</div>
+      <div>
+        <div class="lineage-name">Late Bhupati Charan Adak</div>
+        <div class="lineage-role">The Founder · Farmer &amp; Ojha</div>
+        <div class="lineage-desc">Received Devi KaMaShi in sacred dream. Built the temple. Performed daily worship without priestly sanction, for his entire life. The best ojha in Nonakundu village.</div>
+      </div>
+    </div>
+    <div class="lineage-entry">
+      <div class="lineage-dot">II</div>
+      <div>
+        <div class="lineage-name">Late Samir Adak</div>
+        <div class="lineage-role">The Inheritor · Rice Dealer &amp; Ojha</div>
+        <div class="lineage-desc">Drawn deeply to the original unified form of the goddess. Equally renowned as an ojha. Could not resist the community's decision to dissolve the combined worship after his father's death. He carried the loss silently.</div>
+      </div>
+    </div>
+    <div class="lineage-entry">
+      <div class="lineage-dot">III</div>
+      <div>
+        <div class="lineage-name">Probodh Adak</div>
+        <div class="lineage-role">The Scholar · Retired Bank Manager</div>
+        <div class="lineage-desc">Chose the path of formal education and public service. Widely respected in his community for his social contributions. A different kind of inheritance from the same root.</div>
+      </div>
+    </div>
+    <div class="lineage-entry">
+      <div class="lineage-dot">IV</div>
+      <div>
+        <div class="lineage-name">Dr. Prasenjit Adak</div>
+        <div class="lineage-role">The Restorer · Assistant Professor, Anahata Studios</div>
+        <div class="lineage-desc">PhD in Environmental Engineering. Keeper of Sanskrit mantras through Anahata Studios on YouTube. The first to commit Devi KaMaShi's story to writing. The one in whom two inheritances converge — the scholarly and the devotional.</div>
+      </div>
+    </div>
+  </div>
+  <p class="body-text" style="font-style:italic;color:rgba(245,237,216,0.55);">
+    The name KaMaShi survived the death of the founder, the death of the inheritor,
+    the dissolution of the idol, and the silence of a generation. It arrived intact
+    in the hands of the one person with the knowledge and devotion to carry it forward.
+    This is not coincidence. This is continuation.
+  </p>
+</section>
+
+<div class="hr-ornament"><span class="symbol">✦</span></div>
+
+<section class="gallery-section reveal" id="gallery">
+  <div class="section-label">Sacred Images</div>
+  <h2 class="section-title">The <em>three goddesses</em></h2>
+  <p class="body-text">The three divine natures that unite as KaMaShi — each a complete being, each a face of the same supreme shakti.</p>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item large">
+      <div class="gallery-item-inner">
+        <!-- Replace with: <img src="kamashi-temple.jpg" alt="Temple of Devi KaMaShi, Nonakundu"> -->
+        <span class="gallery-icon">ॐ</span>
+        <span class="gallery-label">Temple of Devi KaMaShi<br>Nonakundu, Howrah</span>
+        <span class="gallery-tag">Place image here</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-item-inner">
+        <!-- Replace with: <img src="kali.jpg" alt="Maa Kali"> -->
+        <span class="gallery-icon">काली</span>
+        <span class="gallery-label">Maa Kali</span>
+        <span class="gallery-tag">Place image here</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-item-inner">
+        <!-- Replace with: <img src="manasa.jpg" alt="Manasa Devi"> -->
+        <span class="gallery-icon">मनसा</span>
+        <span class="gallery-label">Manasa Devi</span>
+        <span class="gallery-tag">Place image here</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-item-inner">
+        <!-- Replace with: <img src="shitala.jpg" alt="Shitala Mata"> -->
+        <span class="gallery-icon">शीतला</span>
+        <span class="gallery-label">Shitala Mata</span>
+        <span class="gallery-tag">Place image here</span>
+      </div>
+    </div>
+
+    <div class="gallery-item large">
+      <div class="gallery-item-inner">
+        <!-- Replace with: <img src="founder.jpg" alt="Late Bhupati Charan Adak"> -->
+        <span class="gallery-icon">✦</span>
+        <span class="gallery-label">Late Bhupati Charan Adak<br>Founder & Devotee</span>
+        <span class="gallery-tag">Place photograph here</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="hr-ornament"><span class="symbol">✦</span></div>
+
+<section class="map-section reveal" id="location">
+  <div class="section-label">Sacred Site</div>
+  <h2 class="section-title">The <em>temple village</em></h2>
+  <p class="body-text">The temple of Devi KaMaShi stands in Nonakundu, Domjur, Howrah, West Bengal — where Late Bhupati Charan Adak built it and worshipped her for his entire life.</p>
+
+  <div class="map-wrap">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.5!2d88.2197492!3d22.6265247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f881004053774f%3A0xc10c1804790ece41!2sNonakundu%2C+Domjur!5e0!3m2!1sen!2sin!4v1"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <div class="map-info">
+    <div class="map-info-block">
+      <div class="map-info-label">Village</div>
+      <div class="map-info-value">Nonakundu</div>
+    </div>
+    <div class="map-info-block">
+      <div class="map-info-label">Block</div>
+      <div class="map-info-value">Domjur, Howrah</div>
+    </div>
+    <div class="map-info-block">
+      <div class="map-info-label">District</div>
+      <div class="map-info-value">Howrah, West Bengal</div>
+    </div>
+    <div class="map-info-block">
+      <div class="map-info-label">Directions</div>
+      <a href="https://maps.google.com/?q=22.6265,88.2197" target="_blank" class="map-directions-btn">
+        Open in Google Maps ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="hr-ornament"><span class="symbol">✦</span></div>
+
+<section id="mantra" class="reveal" style="text-align:center;">
+  <div class="section-label">Invocation</div>
+  <h2 class="section-title" style="text-align:center;">The <em>mantra</em></h2>
+  <div class="mantra-block">
+    <span class="mantra-text">ॐ कामाशि देव्यै नमः</span>
+    <span class="mantra-transliteration">Om KaMaShi Devyai Namah</span>
+  </div>
+  <p class="body-text" style="max-width:560px;margin:0 auto;">
+    Her name is itself the mantra. KaMaShi — Ka, Ma, Shi —
+    spoken with intention, is already the beginning of worship.
+    The goddess who chose a non-brahmin farmer as her devotee
+    has never required elaborate ritual. She requires only sincerity.
+  </p>
+</section>
+
+<footer>
+  <div class="footer-name">Devi KaMaShi</div>
+  <div class="footer-devanagari">देवी कामाशि · काली · मनसा · शीतला</div>
+  <div class="footer-credit">
+    Temple established by Late Bhupati Charan Adak · Nonakundu, Domjur, Howrah, West Bengal<br>
+    Documented by Dr. Prasenjit Adak ·
+    <a href="https://www.youtube.com/channel/UCTwLLIs-ChRgJwQG1SZWQBA" target="_blank">Anahata Studios</a> · 2025 CE
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
