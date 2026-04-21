@@ -480,6 +480,70 @@
   }
   .download-btn svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
 
+ /* PRESENT STATE NOTICE */
+.state-notice {
+  max-width: 860px; margin: 0 auto; padding: 0 2rem 3rem;
+}
+.state-notice-inner {
+  border: 1px solid rgba(123, 30, 30, 0.45);
+  border-left: 4px solid #7b1e1e;
+  background: rgba(123, 30, 30, 0.07);
+  padding: 2rem 2.2rem;
+  position: relative;
+}
+.state-notice-inner::before {
+  content: '';
+  position: absolute; inset: 0;
+  border: 1px solid rgba(123,30,30,0.1);
+  margin: 6px;
+  pointer-events: none;
+}
+.state-notice-label {
+  font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: #a83030; margin-bottom: 0.75rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+.state-notice-title {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.4rem; color: var(--parchment);
+  margin-bottom: 1.1rem; line-height: 1.3;
+}
+.state-notice-title em { color: #c49a22; font-style: italic; }
+.state-notice-body {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  line-height: 1.85; color: rgba(245, 237, 216, 0.72);
+  margin-bottom: 1rem;
+}
+.state-notice-body:last-child { margin-bottom: 0; }
+.state-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  margin: 1.4rem 0;
+}
+@media (max-width: 520px) { .state-grid { grid-template-columns: 1fr; } }
+.state-cell {
+  padding: 1rem 1.2rem;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(139,105,20,0.15);
+}
+.state-cell-label {
+  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.state-cell-label.then { color: rgba(196,154,34,0.6); }
+.state-cell-label.now { color: #a83030; }
+.state-cell-value {
+  font-family: 'IM Fell English', serif;
+  font-size: 1rem; line-height: 1.5;
+}
+.state-cell-value.then { color: rgba(245,237,216,0.75); }
+.state-cell-value.now { color: rgba(245,237,216,0.6); font-style: italic; }
+.restoration-note {
+  margin-top: 1.2rem; padding-top: 1.2rem;
+  border-top: 1px solid rgba(139,105,20,0.15);
+  font-style: italic;
+  font-size: 0.95rem; color: rgba(245,237,216,0.45); line-height: 1.7;
+}
+
   /* FOOTER */
   footer {
     border-top: 1px solid rgba(139, 105, 20, 0.2);
@@ -629,6 +693,46 @@
     supersedes caste, and where the goddess chooses her devotee regardless of social station.
     His spiritual authority was not granted by brahmin sanction. It came directly from her.
   </p>
+ <div class="state-notice reveal">
+  <div class="state-notice-inner">
+    <div class="state-notice-label">Present Condition · As of 2025</div>
+    <h3 class="state-notice-title">The combined form has been <em>dissolved</em></h3>
+    <p class="state-notice-body">
+      After the death of Bhupati Charan Adak, the community was unable to sustain
+      worship of this unrecognized, non-canonical goddess. No one held his spiritual
+      authority or his personal relationship with KaMaShi. The combined idol was
+      dissolved — not by divine instruction, but by human convenience.
+    </p>
+
+    <div class="state-grid">
+      <div class="state-cell">
+        <div class="state-cell-label then">Then — as founded</div>
+        <div class="state-cell-value then">
+          Devi KaMaShi worshipped in her unified form — six arms, three natures, one idol.
+          Daily worship performed by Bhupati Charan Adak himself.
+        </div>
+      </div>
+      <div class="state-cell">
+        <div class="state-cell-label now">Now — present day</div>
+        <div class="state-cell-value now">
+          The combined form no longer exists at the temple.
+          Only the Manasa Devi idol remains, tended by a brahmin priest.
+          Kali and Shitala are present in name only — symbolic, not actively worshipped.
+        </div>
+      </div>
+    </div>
+
+    <p class="state-notice-body">
+      The temple still stands in Nonakundu. Manasa Devi is worshipped there daily.
+      But KaMaShi — the goddess who revealed herself by name, who commanded a temple
+      to be built, who empowered a lineage of healers — is not worshipped there today.
+    </p>
+    <p class="restoration-note">
+      This website exists as the first step toward restoring what was lost.
+      The name survived. The story is now written. The restoration has begun.
+    </p>
+  </div>
+</div>
 </section>
  
 </div>
